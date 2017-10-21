@@ -5,6 +5,8 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 import org.apache.log4j.Logger;
@@ -43,9 +45,12 @@ public class ConexionCliente extends Thread implements Observer{
                 mensajeRecibido = entradaDatos.readUTF();
                 // Pone el mensaje recibido en mensajes para que se notifique 
                 // a sus observadores que hay un nuevo mensaje.
-                mensajes.setMensaje(mensajeRecibido);
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy hh:mm:ss");
+            String fecha = dateFormat.format(new Date());
+                mensajes.setMensaje(fecha+" " + mensajeRecibido);
             } catch (IOException ex) {
                 log.info("Cliente con la IP " + socket.getInetAddress().getHostName() + " desconectado.");
+                mensajes.setMensaje("Cliente con la IP " + socket.getInetAddress().getHostName() + " desconectado.");
                 conectado = false; 
                 // Si se ha producido un error al recibir datos del cliente se cierra la conexion con el.
                 try {
