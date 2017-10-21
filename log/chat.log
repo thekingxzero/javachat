@@ -860,3 +860,6 @@
 2017-10-20 19:47:14,093 [Thread-0] INFO  servidorchat.ConexionCliente - Cliente con la IP 127.0.0.1 desconectado.
 2017-10-20 19:47:14,094 [Thread-0] ERROR servidorchat.ConexionCliente - Error al enviar mensaje al cliente (Connection reset by peer: socket write error).
 2017-10-20 19:47:22,845 [Thread-1] ERROR servidorchat.ConexionCliente - Error al enviar mensaje al cliente (Socket closed).
+2017-10-20 19:48:01,037 [Thread-1] INFO  servidorchat.ConexionCliente - Cliente con la IP E204-08 desconectado.
+2017-10-20 19:48:01,038 [Thread-1] ERROR servidorchat.ConexionCliente - Error al enviar mensaje al cliente (Connection reset by peer: socket write error).
+2017-10-20 19:48:01,038 [Thread-1] ERROR servidorchat.ConexionCliente - Error al enviar mensaje al cliente (Socket closed).
